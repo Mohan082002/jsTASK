@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // question_1
+
+        let processNumbers = function(x, y , callback ){
+            return callback(x , y)
+
+        }
+        var sum = processNumbers(3,4,function(x,y){
+            return x+y
+        })
+        console.log("sum is : " + sum);
+
+
+        // question_2
+        let greet = function( callback){
+            return callback("Alice")
+        }
+        let str = greet(function(name){
+            return "Hello, " + name + "!"
+
+        })
+        console.log(str);
+
+        // question_3
+        let calculate = function(x , y, callback){
+            return callback(x,y)
+        }
+        let substration = calculate(10 , 5 ,function(x,y){
+            return x - y
+
+        })
+        console.log("Difference:is :" , substration);
+
+
+    </script>
+</body>
+</html>
